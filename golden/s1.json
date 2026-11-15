@@ -1,0 +1,73 @@
+{
+  "id": "s1",
+  "name": "좌회전 15m 점등 + 회전 직전 감속",
+  "route": "navi",
+  "km": 1.427917,
+  "endT": 150,
+  "tooShort": false,
+  "hadTbt": true,
+  "hadCau": false,
+  "scenes": [
+    {
+      "principle": "signal",
+      "t": 102,
+      "s": 0.5,
+      "est": false,
+      "kind": "좌회전",
+      "value": 15
+    },
+    {
+      "principle": "decel",
+      "t": 102,
+      "s": 0.3,
+      "est": false,
+      "kind": "좌회전",
+      "target": "turn",
+      "aMax": 12,
+      "thr": 15,
+      "passV": 20,
+      "win": [
+        97.3,
+        102
+      ]
+    }
+  ],
+  "basic": {
+    "accel": [],
+    "decel": [],
+    "over": []
+  },
+  "risks": [],
+  "score": {
+    "P": {
+      "signal": 68.181818,
+      "decel": 66.363636,
+      "zone": null
+    },
+    "S": 67.272727,
+    "Bobs": 100,
+    "B": 90.140781,
+    "T": 78.706754,
+    "withoutExemptT": null
+  },
+  "card": {
+    "lines": [
+      {
+        "kind": "praise",
+        "principle": "signal",
+        "partial": true,
+        "est": false,
+        "text": "좌회전할 때 깜빡이를 켰어요"
+      },
+      {
+        "kind": "fix",
+        "principle": "decel",
+        "partial": false,
+        "est": false,
+        "text": "좌회전 전 최대 감속 초당 12km/h. 회전 50m 전부터 속도를 줄여 주세요"
+      }
+    ],
+    "notes": [],
+    "scoreLine": "기록 1회째"
+  }
+}

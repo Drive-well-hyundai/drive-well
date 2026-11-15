@@ -1,0 +1,18 @@
+{
+  "name": "같은 방향 깜빡이를 켠 채 이어지는 회전",
+  "route": "navi",
+  "start": "2026-11-10T13:10",
+  "events": [
+    {"t":0,"gear":"D","speed_kmh":0},
+    {"t":9000,"speed_kmh":36},
+    {"t":60000,"tbt":{"type":"TURN_LEFT","distance":150}},
+    {"t":71000,"turn_signal":"LEFT"},
+    {"t":75000,"tbt":{"distance":0}},
+    {"t":75100,"tbt":{"type":"TURN_SHARP_L","distance":120}},
+    {"t":87100,"tbt":{"distance":0}},
+    {"t":88000,"tbt":{"type":"TURN_STRAIGHT","distance":400},"turn_signal":"OFF"},
+    {"t":140000,"speed_kmh":36},
+    {"t":149000,"speed_kmh":0},
+    {"t":151000,"gear":"P"}
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "b6",
+  "name": "주행 시작 때 이미 켜져 있던 경고등",
+  "route": "navi",
+  "km": 1.879611,
+  "endT": 145,
+  "tooShort": false,
+  "hadTbt": false,
+  "hadCau": false,
+  "scenes": [],
+  "basic": {
+    "accel": [],
+    "decel": [
+      {
+        "t": 41.3,
+        "a": 20,
+        "v": 37,
+        "exempt": null
+      }
+    ],
+    "over": []
+  },
+  "risks": [],
+  "score": {
+    "P": {
+      "signal": null,
+      "decel": null,
+      "zone": null
+    },
+    "S": null,
+    "Bobs": 0,
+    "B": 88.33956,
+    "T": 88.33956,
+    "withoutExemptT": null
+  },
+  "card": {
+    "lines": [
+      {
+        "kind": "fix",
+        "principle": "basic",
+        "partial": false,
+        "est": false,
+        "text": "급감속 1번. 일찍 속도를 줄여 보세요"
+      }
+    ],
+    "notes": [
+      "급가속·급감속·과속만 평가했어요"
+    ],
+    "scoreLine": "기록 1회째"
+  }
+}

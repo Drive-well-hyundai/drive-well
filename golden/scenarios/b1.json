@@ -1,0 +1,33 @@
+{
+  "name": "회전 3번 중 2번 성공",
+  "route": "navi",
+  "start": "2026-11-10T09:00",
+  "events": [
+    {"t":0,"gear":"D","speed_kmh":0},
+    {"t":9000,"speed_kmh":36},
+    {"t":60000,"tbt":{"type":"TURN_LEFT","distance":150}},
+    {"t":71000,"turn_signal":"LEFT"},
+    {"t":72000,"speed_kmh":36,"tbt":{"distance":30},"brake":true},
+    {"t":74000,"speed_kmh":20,"tbt":{"distance":14.4},"brake":false},
+    {"t":76600,"speed_kmh":20,"tbt":{"distance":0}},
+    {"t":77600,"tbt":{"type":"TURN_STRAIGHT","distance":300},"turn_signal":"OFF"},
+    {"t":80600,"speed_kmh":36},
+    {"t":100000,"tbt":{"type":"TURN_RIGHT","distance":150}},
+    {"t":111500,"turn_signal":"RIGHT"},
+    {"t":112000,"speed_kmh":36,"tbt":{"distance":30},"brake":true},
+    {"t":114000,"speed_kmh":20,"tbt":{"distance":14.4},"brake":false},
+    {"t":116600,"speed_kmh":20,"tbt":{"distance":0}},
+    {"t":117600,"tbt":{"type":"TURN_STRAIGHT","distance":300},"turn_signal":"OFF"},
+    {"t":120600,"speed_kmh":36},
+    {"t":140000,"tbt":{"type":"TURN_LEFT","distance":150}},
+    {"t":154400,"turn_signal":"LEFT"},
+    {"t":152000,"speed_kmh":36,"tbt":{"distance":30},"brake":true},
+    {"t":154000,"speed_kmh":20,"tbt":{"distance":14.4},"brake":false},
+    {"t":156600,"speed_kmh":20,"tbt":{"distance":0}},
+    {"t":157600,"tbt":{"type":"TURN_STRAIGHT","distance":300},"turn_signal":"OFF"},
+    {"t":160600,"speed_kmh":36},
+    {"t":190000,"speed_kmh":36},
+    {"t":199000,"speed_kmh":0},
+    {"t":201000,"gear":"P"}
+  ]
+}

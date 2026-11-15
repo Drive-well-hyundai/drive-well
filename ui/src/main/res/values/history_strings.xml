@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="history_weekly">주별 기록</string>
+    <string name="history_monthly">월별 기록</string>
+    <string name="history_tab_week">주별</string>
+    <string name="history_tab_month">월별</string>
+    <string name="history_month">%1$d월</string>
+    <string name="history_weeks_count">%1$d주</string>
+    <string name="history_weekly_behaviour">주별 변화 (%1$s)</string>
+    <string name="history_decel_unit">초당 km/h</string>
+    <string name="history_last_behaviour">최근 값 %1$s</string>
+    <string name="history_behaviour_compare">6개월 전 4주 %1$s → 최근 4주 %2$s</string>
+    <string name="history_missed_signals">깜빡이를 안 켠 회전 %1$d번</string>
+    <string name="history_recent_scenes">최근 장면</string>
+    <string name="history_no_measurements">측정값이 없어요</string>
+    <string name="history_no_recent_scenes">최근에 기록한 장면이 없어요</string>
+    <string name="history_basic">기본 항목</string>
+    <string name="history_trip_count">주행 %1$d회 · %2$skm</string>
+    <string name="history_week_fix">가장 잦은 고칠 점 · %1$s %2$d번</string>
+    <string name="history_delta">지난 기간보다 %1$+d점</string>
+    <string name="reason_title">이유 기록</string>
+    <string name="reason_fix_tab">고칠 점</string>
+    <string name="reason_excluded_tab">점수에서 제외</string>
+    <string name="reason_excluded_count">경고등 구간 급감속 %1$d번 제외</string>
+    <string name="reason_counterfactual">현재 %1$s점 · 급감속 포함 시 %2$s점</string>
+    <string name="reason_lamp_row">%1$s · %2$s · %3$s 앞뒤 5초</string>
+    <string name="reason_scene_row">%1$s · %2$s</string>
+    <string name="reason_in_scene">장면 점수에 반영한 급감속</string>
+    <string name="reason_recent_fix">최근 고칠 점</string>
+    <string name="reason_no_recent_fix">최근 기록에 고칠 점이 없어요</string>
+</resources>

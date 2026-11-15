@@ -1,0 +1,23 @@
+{
+  "name": "내비 없이 우회전·좌회전",
+  "route": "vehicle",
+  "start": "2026-11-10T08:10",
+  "events": [
+    {"t":0,"gear":"D","speed_kmh":0},
+    {"t":8000,"speed_kmh":30},
+    {"t":73000,"speed_kmh":30,"turn_signal":"RIGHT","brake":true},
+    {"t":75000,"speed_kmh":21},
+    {"t":76000,"steering_deg":320,"brake":false},
+    {"t":78500,"steering_deg":0},
+    {"t":79500,"speed_kmh":25,"turn_signal":"OFF"},
+    {"t":84000,"speed_kmh":35},
+    {"t":120000,"speed_kmh":35,"brake":true},
+    {"t":123000,"speed_kmh":21},
+    {"t":124000,"steering_deg":-300,"brake":false},
+    {"t":126200,"steering_deg":0},
+    {"t":127500,"speed_kmh":30},
+    {"t":165000,"speed_kmh":30,"brake":true},
+    {"t":172000,"speed_kmh":0},
+    {"t":174000,"gear":"P"}
+  ]
+}

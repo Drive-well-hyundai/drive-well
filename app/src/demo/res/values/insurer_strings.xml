@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="insurer_entry">보험사에 보내기</string>
+    <string name="insurer_title">보험사에 보낼까요</string>
+    <string name="insurer_phase">2단계 제안</string>
+    <string name="insurer_recipient">받는 곳 · 예시 보험사</string>
+    <string name="insurer_period">기간 · 최근 6개월</string>
+    <string name="insurer_include">보낼 정보</string>
+    <string name="insurer_include_details">기간, 주행거리, 총점, 원칙별 점수와 기회 수</string>
+    <string name="insurer_exclude">제외하는 정보</string>
+    <string name="insurer_exclude_details">장면 원본, 위치, 주행 시각, 차량 식별 정보</string>
+    <string name="insurer_send">동의하고 보내기</string>
+    <string name="insurer_simulated">시연을 마쳤어요. 실제로 보낸 정보는 없어요</string>
+</resources>

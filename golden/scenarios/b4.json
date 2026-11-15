@@ -1,0 +1,19 @@
+{
+  "name": "추정 회전 2번이 50m 안",
+  "route": "vehicle",
+  "start": "2026-11-10T20:40",
+  "events": [
+    {"t":0,"gear":"D","speed_kmh":0},
+    {"t":8000,"speed_kmh":30},
+    {"t":72000,"speed_kmh":30},
+    {"t":76000,"speed_kmh":20},
+    {"t":76000,"steering_deg":320},
+    {"t":78500,"steering_deg":0},
+    {"t":81500,"speed_kmh":20,"steering_deg":-320},
+    {"t":84000,"steering_deg":0},
+    {"t":88000,"speed_kmh":30},
+    {"t":130000,"speed_kmh":30},
+    {"t":136000,"speed_kmh":0},
+    {"t":138000,"gear":"P"}
+  ]
+}

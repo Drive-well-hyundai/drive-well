@@ -1,0 +1,81 @@
+{
+  "id": "s3",
+  "name": "스쿨존 37km/h 통과",
+  "route": "navi",
+  "km": 1.337444,
+  "endT": 160,
+  "tooShort": false,
+  "hadTbt": true,
+  "hadCau": true,
+  "scenes": [
+    {
+      "principle": "signal",
+      "t": 56,
+      "s": 1,
+      "est": false,
+      "kind": "우회전",
+      "value": 35
+    },
+    {
+      "principle": "decel",
+      "t": 56,
+      "s": 1,
+      "est": false,
+      "kind": "우회전",
+      "target": "turn",
+      "aMax": 4,
+      "thr": 15,
+      "passV": 20,
+      "win": [
+        50.2,
+        56
+      ]
+    },
+    {
+      "principle": "zone",
+      "t": 126.1,
+      "s": 0.65,
+      "est": false,
+      "max": 37,
+      "limit": 30
+    }
+  ],
+  "basic": {
+    "accel": [],
+    "decel": [],
+    "over": []
+  },
+  "risks": [],
+  "score": {
+    "P": {
+      "signal": 72.727273,
+      "decel": 72.727273,
+      "zone": 69.545455
+    },
+    "S": 71.666667,
+    "Bobs": 100,
+    "B": 90.131979,
+    "T": 80.899323,
+    "withoutExemptT": null
+  },
+  "card": {
+    "lines": [
+      {
+        "kind": "praise",
+        "principle": "signal",
+        "partial": false,
+        "est": false,
+        "text": "우회전 35m 전에 깜빡이를 켰어요"
+      },
+      {
+        "kind": "fix",
+        "principle": "zone",
+        "partial": false,
+        "est": false,
+        "text": "스쿨존 최고 37km/h. 30km/h 이하로 달려 주세요"
+      }
+    ],
+    "notes": [],
+    "scoreLine": "기록 1회째"
+  }
+}

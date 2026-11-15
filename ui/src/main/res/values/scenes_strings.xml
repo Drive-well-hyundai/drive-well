@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scenes_title">이번 주행 장면</string>
+    <string name="scenes_done">한 장으로 돌아가기</string>
+    <string name="principle_signal">미리 켜기</string>
+    <string name="principle_decel">미리 줄이기</string>
+    <string name="principle_zone">스쿨존 제한속도 준수</string>
+    <string name="scenes_counts">%1$s · 성공 %2$d / 기회 %3$d</string>
+    <string name="scenes_no_signal_opportunity">평가할 회전 없음</string>
+    <string name="scenes_no_decel_opportunity">평가할 회전·과속방지턱 없음</string>
+    <string name="scenes_no_zone_opportunity">평가할 스쿨존 없음</string>
+    <string name="scenes_signal_average">평균 %1$dm 전 · 기준 30m (도로교통법)</string>
+    <string name="scenes_no_signal">평가한 회전에서 깜빡이를 켜지 않았어요</string>
+    <string name="scenes_no_hard_brake">급감속 없음</string>
+    <string name="scenes_hard_brake">급감속 %1$d번 · %2$s 앞</string>
+    <string name="scenes_zone_top">%1$d곳 · 최고 %2$dkm/h (제한 %3$skm/h)</string>
+    <string name="scenes_risk_count">%1$s %2$d번</string>
+    <string name="scenes_risk_detail">경고등이 켜진 시점 전후 각 5초 · 최대 감속 초당 %1$dkm/h</string>
+    <string name="scenes_risk_exempt">경고등 구간의 급감속은 점수에서 제외했어요</string>
+    <string name="scenes_ruler_description">회전까지 남은 거리입니다. 기준은 30미터입니다.</string>
+    <string name="scenes_ruler_average_description">깜빡이를 켠 평균 거리는 %1$d미터입니다.</string>
+    <string name="scenes_ruler_target">기준 30m</string>
+    <string name="scenes_ruler_average">평균 %1$dm</string>
+    <string name="scenes_ruler_turn">회전</string>
+    <string name="lamp_fca">전방 충돌 방지 보조 경고등</string>
+    <string name="lamp_abs">ABS 경고등</string>
+    <string name="lamp_esc">ESC 경고등</string>
+    <string name="lamp_attention">운전자 주의 경고등</string>
+    <string name="lamp_generic">차량 경고등</string>
+    <string name="scene_left">좌회전</string>
+    <string name="scene_right">우회전</string>
+    <string name="scene_uturn">유턴</string>
+    <string name="scene_bump">과속방지턱</string>
+    <string name="scene_zone">스쿨존</string>
+    <string name="scene_generic">주행 장면</string>
+</resources>

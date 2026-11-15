@@ -1,0 +1,89 @@
+{
+  "id": "s4",
+  "name": "과속방지턱 앞 미리 감속",
+  "route": "navi",
+  "km": 1.410972,
+  "endT": 159,
+  "tooShort": false,
+  "hadTbt": true,
+  "hadCau": true,
+  "scenes": [
+    {
+      "principle": "decel",
+      "t": 44,
+      "s": 1,
+      "est": false,
+      "target": "bump",
+      "aMax": 4,
+      "thr": 15,
+      "passV": 16,
+      "win": [
+        37.6,
+        44
+      ],
+      "decelS": 1,
+      "passS": 1
+    },
+    {
+      "principle": "signal",
+      "t": 105,
+      "s": 0.345333,
+      "est": false,
+      "kind": "좌회전",
+      "value": 10.36
+    },
+    {
+      "principle": "decel",
+      "t": 105,
+      "s": 1,
+      "est": false,
+      "kind": "좌회전",
+      "target": "turn",
+      "aMax": 4,
+      "thr": 15,
+      "passV": 20,
+      "win": [
+        99.9,
+        105
+      ]
+    }
+  ],
+  "basic": {
+    "accel": [],
+    "decel": [],
+    "over": []
+  },
+  "risks": [],
+  "score": {
+    "P": {
+      "signal": 66.775758,
+      "decel": 75,
+      "zone": null
+    },
+    "S": 70.887879,
+    "Bobs": 100,
+    "B": 90.139134,
+    "T": 80.513506,
+    "withoutExemptT": null
+  },
+  "card": {
+    "lines": [
+      {
+        "kind": "praise",
+        "principle": "decel",
+        "partial": false,
+        "est": false,
+        "text": "회전과 과속방지턱 앞에서 모두 미리 속도를 줄였어요"
+      },
+      {
+        "kind": "fix",
+        "principle": "signal",
+        "partial": false,
+        "est": false,
+        "text": "좌회전 10m 전에 깜빡이를 켰어요. 다음엔 30m 전부터 켜 주세요"
+      }
+    ],
+    "notes": [],
+    "scoreLine": "기록 1회째"
+  }
+}

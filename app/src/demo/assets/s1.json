@@ -1,0 +1,16 @@
+{
+  "name": "좌회전 15m 점등 + 회전 직전 감속",
+  "route": "navi",
+  "start": "2026-11-10T18:30",
+  "events": [
+    {"t":0,"gear":"D","speed_kmh":0},
+    {"t":10000,"speed_kmh":40},
+    {"t":91000,"tbt":{"type":"TURN_LEFT","distance":120}},
+    {"t":100500,"speed_kmh":40,"tbt":{"distance":15},"turn_signal":"LEFT","brake":true},
+    {"t":102000,"speed_kmh":20,"tbt":{"distance":2},"steering_deg":-300,"brake":false},
+    {"t":104000,"steering_deg":0},
+    {"t":105000,"speed_kmh":30,"tbt":{"type":"TURN_STRAIGHT","distance":400},"turn_signal":"OFF"},
+    {"t":140000,"speed_kmh":30},
+    {"t":150000,"speed_kmh":0,"gear":"P"}
+  ]
+}

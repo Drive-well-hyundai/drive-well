@@ -1,0 +1,25 @@
+{
+  "name": "ABS 경고등 직전 급감속",
+  "route": "navi",
+  "start": "2026-11-10T19:15",
+  "events": [
+    {"t":0,"gear":"D","speed_kmh":0},
+    {"t":12000,"speed_kmh":50},
+    {"t":60500,"speed_kmh":50,"brake":true},
+    {"t":61000,"telltale":{"ABS":"ON"}},
+    {"t":62500,"speed_kmh":15},
+    {"t":63500,"telltale":{"ABS":"OFF"}},
+    {"t":64000,"speed_kmh":15,"brake":false},
+    {"t":70000,"speed_kmh":35},
+    {"t":72000,"speed_kmh":35,"tbt":{"type":"TURN_RIGHT","distance":180}},
+    {"t":86900,"tbt":{"distance":35},"turn_signal":"RIGHT"},
+    {"t":88000,"speed_kmh":35,"tbt":{"distance":24},"brake":true},
+    {"t":91000,"speed_kmh":21,"tbt":{"distance":2},"brake":false},
+    {"t":91200,"steering_deg":290},
+    {"t":93700,"steering_deg":0},
+    {"t":94500,"speed_kmh":30,"tbt":{"type":"TURN_STRAIGHT","distance":700},"turn_signal":"OFF"},
+    {"t":130000,"speed_kmh":30,"brake":true},
+    {"t":137000,"speed_kmh":0},
+    {"t":139000,"gear":"P"}
+  ]
+}

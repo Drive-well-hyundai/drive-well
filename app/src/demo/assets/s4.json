@@ -1,0 +1,24 @@
+{
+  "name": "과속방지턱 앞 미리 감속",
+  "route": "navi",
+  "start": "2026-11-10T21:05",
+  "events": [
+    {"t":0,"gear":"D","speed_kmh":0},
+    {"t":9000,"speed_kmh":36},
+    {"t":30000,"caution":{"type":"SPEED_BUMP","remain":126}},
+    {"t":39000,"speed_kmh":36,"caution":{"remain":36},"brake":true},
+    {"t":44000,"speed_kmh":16,"caution":{"remain":0},"brake":false},
+    {"t":46000,"speed_kmh":16,"caution":null},
+    {"t":52000,"speed_kmh":40},
+    {"t":90000,"speed_kmh":40,"tbt":{"type":"TURN_LEFT","distance":160}},
+    {"t":100000,"speed_kmh":40,"tbt":{"distance":49},"brake":true},
+    {"t":104600,"turn_signal":"LEFT"},
+    {"t":105000,"speed_kmh":20,"tbt":{"distance":7},"brake":false},
+    {"t":105500,"steering_deg":-300},
+    {"t":107500,"steering_deg":0},
+    {"t":108500,"speed_kmh":30,"tbt":{"type":"TURN_STRAIGHT","distance":500},"turn_signal":"OFF"},
+    {"t":150000,"speed_kmh":30,"brake":true},
+    {"t":157000,"speed_kmh":0},
+    {"t":159000,"gear":"P"}
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "s5",
+  "name": "ABS 경고등 직전 급감속",
+  "route": "navi",
+  "km": 1.371167,
+  "endT": 139,
+  "tooShort": false,
+  "hadTbt": true,
+  "hadCau": false,
+  "scenes": [
+    {
+      "principle": "signal",
+      "t": 91,
+      "s": 1,
+      "est": false,
+      "kind": "우회전",
+      "value": 35
+    },
+    {
+      "principle": "decel",
+      "t": 91,
+      "s": 1,
+      "est": false,
+      "kind": "우회전",
+      "target": "turn",
+      "aMax": 4.8,
+      "thr": 15,
+      "passV": 21,
+      "win": [
+        85.5,
+        91
+      ]
+    }
+  ],
+  "basic": {
+    "accel": [],
+    "decel": [
+      {
+        "t": 62,
+        "a": 17.3,
+        "v": 31.7,
+        "exempt": "telltale"
+      }
+    ],
+    "over": []
+  },
+  "risks": [
+    {
+      "type": "ABS",
+      "t": 61,
+      "aMax": 17.3,
+      "vBefore": 50
+    }
+  ],
+  "score": {
+    "P": {
+      "signal": 72.727273,
+      "decel": 72.727273,
+      "zone": null
+    },
+    "S": 72.727273,
+    "Bobs": 100,
+    "B": 90.135262,
+    "T": 81.431267,
+    "withoutExemptT": 80.754957
+  },
+  "card": {
+    "lines": [
+      {
+        "kind": "praise",
+        "principle": "signal",
+        "partial": false,
+        "est": false,
+        "text": "우회전 35m 전에 깜빡이를 켰어요"
+      },
+      {
+        "kind": "praise",
+        "principle": "decel",
+        "partial": false,
+        "est": false,
+        "text": "우회전 전에 미리 속도를 줄였어요"
+      }
+    ],
+    "notes": [],
+    "scoreLine": "기록 1회째"
+  }
+}

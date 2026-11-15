@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_back">뒤로</string>
+    <string name="nav_close">닫기</string>
+    <string name="brand_name">Drive Well</string>
+    <string name="empty_trip">아직 주행 기록이 없어요</string>
+    <string name="speed_permission_required">주행을 기록하려면 속도 권한을 허용해 주세요</string>
+    <string name="speed_permission_retry">속도 권한 허용</string>
+    <string name="decel_per_second">초당 %1$skm/h</string>
+</resources>

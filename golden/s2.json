@@ -1,0 +1,98 @@
+{
+  "id": "s2",
+  "name": "내비 없이 우회전·좌회전",
+  "route": "vehicle",
+  "km": 1.402444,
+  "endT": 174,
+  "tooShort": false,
+  "hadTbt": false,
+  "hadCau": false,
+  "scenes": [
+    {
+      "principle": "signal",
+      "t": 76,
+      "s": 0.667593,
+      "est": true,
+      "kind": "우회전",
+      "value": 20.027778
+    },
+    {
+      "principle": "decel",
+      "t": 76,
+      "s": 1,
+      "est": true,
+      "kind": "우회전",
+      "target": "turn",
+      "aMax": 4.6,
+      "thr": 14,
+      "passV": 22,
+      "win": [
+        69.5,
+        76
+      ]
+    },
+    {
+      "principle": "signal",
+      "t": 124,
+      "s": 0,
+      "est": true,
+      "kind": "좌회전",
+      "value": null
+    },
+    {
+      "principle": "decel",
+      "t": 124,
+      "s": 1,
+      "est": true,
+      "kind": "좌회전",
+      "target": "turn",
+      "aMax": 4.8,
+      "thr": 15,
+      "passV": 23,
+      "win": [
+        117.9,
+        124
+      ]
+    }
+  ],
+  "basic": {
+    "accel": [],
+    "decel": [],
+    "over": []
+  },
+  "risks": [],
+  "score": {
+    "P": {
+      "signal": 63.896605,
+      "decel": 75,
+      "zone": null
+    },
+    "S": 69.448302,
+    "Bobs": 100,
+    "B": 90.138305,
+    "T": 79.793304,
+    "withoutExemptT": null
+  },
+  "card": {
+    "lines": [
+      {
+        "kind": "praise",
+        "principle": "decel",
+        "partial": false,
+        "est": true,
+        "text": "회전 2번 모두 미리 속도를 줄였어요"
+      },
+      {
+        "kind": "fix",
+        "principle": "signal",
+        "partial": false,
+        "est": true,
+        "text": "좌회전 1번은 깜빡이를 안 켰어요. 회전 30m 전부터 켜 주세요"
+      }
+    ],
+    "notes": [
+      "내비 안내가 없어 회전 장면만 평가했어요"
+    ],
+    "scoreLine": "기록 1회째"
+  }
+}

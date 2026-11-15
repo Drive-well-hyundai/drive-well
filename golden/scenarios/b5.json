@@ -1,0 +1,18 @@
+{
+  "name": "기본 항목만 있는 주행",
+  "route": "navi",
+  "start": "2026-11-10T07:30",
+  "events": [
+    {"t":0,"gear":"D","speed_kmh":0},
+    {"t":14000,"speed_kmh":54},
+    {"t":40000,"speed_kmh":54,"brake":true},
+    {"t":42000,"speed_kmh":14,"brake":false},
+    {"t":52000,"speed_kmh":54},
+    {"t":80000,"speed_kmh":54,"brake":true},
+    {"t":82000,"speed_kmh":14,"brake":false},
+    {"t":92000,"speed_kmh":54},
+    {"t":130000,"speed_kmh":54},
+    {"t":143500,"speed_kmh":0},
+    {"t":145000,"gear":"P"}
+  ]
+}

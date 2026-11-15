@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 문구 원본은 implementation.md "서비스 상태", parking-feedback.md. U-2에서 앱 strings.xml 하나로 모은다 -->
+<resources>
+    <string name="service_channel_name">주행 기록</string>
+    <string name="service_notice_idle">주행 시작 대기 중</string>
+    <string name="service_notice_recording">주행 기록 중</string>
+    <string name="park_channel_name">운전 정리</string>
+    <string name="park_notice_title">주행 요약이 준비됐어요</string>
+
+    <!-- 오늘의 한 장. 문장 틀의 원본은 parking-feedback.md "문구 표"다. 키는 card_{줄}_{원칙}_{조건}이다.
+         {이름} 자리는 :engine의 fillTemplate이 채운다. 골든 테스트가 이 파일을 읽어 demo-sim.js 문구와 글자까지 비교한다.
+         고치면 문구 표와 demo-sim.js를 함께 고친다 -->
+    <string name="card_word_left_turn">좌회전</string>
+    <string name="card_word_right_turn">우회전</string>
+    <string name="card_word_u_turn">유턴</string>
+    <string name="card_word_turn">회전</string>
+    <string name="card_word_bump">과속방지턱</string>
+    <string name="card_word_turn_and_bump">회전과 과속방지턱</string>
+    <string name="card_word_times">번</string>
+    <string name="card_word_places">곳</string>
+    <string name="card_word_signal_not_on">안 켬</string>
+    <string name="card_change_signal">깜빡이를 켠 거리 · 이전 평균 {before} → 이번 {after}</string>
+    <string name="card_change_decel">최대 감속 · 이전 평균 초당 {before}km/h → 이번 초당 {after}km/h</string>
+    <string name="card_change_zone">스쿨존 최고 속도 · 이전 평균 {before} → 이번 {after}km/h</string>
+
+    <string name="card_praise_signal_one">{turn} {m}m 전에 깜빡이를 켰어요</string>
+    <string name="card_praise_signal_all">{turn} {n}번 모두 30m 전부터 깜빡이를 켰어요</string>
+    <string name="card_praise_signal_some">{turn} {n}번 중 {ok}번은 30m 전부터 깜빡이를 켰어요</string>
+    <string name="card_praise_decel_one">{where} 전에 미리 속도를 줄였어요</string>
+    <string name="card_praise_decel_all">{where} {n}{unit} 모두 미리 속도를 줄였어요</string>
+    <string name="card_praise_decel_all_both">회전과 과속방지턱 앞에서 모두 미리 속도를 줄였어요</string>
+    <string name="card_praise_decel_some">{where} {n}{unit} 중 {ok}{unit}은 미리 속도를 줄였어요</string>
+    <string name="card_praise_zone_one">스쿨존에서 {limit}km/h 이하로 달렸어요</string>
+    <string name="card_praise_zone_all">스쿨존 {n}곳 모두 {limit}km/h 이하로 달렸어요</string>
+    <string name="card_praise_zone_some">스쿨존 {n}곳 중 {ok}곳에서 {limit}km/h 이하로 달렸어요</string>
+
+    <string name="card_partial_signal">{turn}할 때 깜빡이를 켰어요</string>
+    <string name="card_partial_decel">{where} 앞에서 속도를 줄였어요</string>
+
+    <string name="card_fix_signal_miss">{turn} {n}번은 깜빡이를 안 켰어요. 회전 30m 전부터 켜 주세요</string>
+    <string name="card_fix_signal_late">{turn} 1번은 {m}m 전에 깜빡이를 켰어요. 30m 전부터 켜 주세요</string>
+    <string name="card_fix_signal_one">{turn} {m}m 전에 깜빡이를 켰어요. 다음엔 30m 전부터 켜 주세요</string>
+    <string name="card_fix_signal_avg">깜빡이를 평균 {avg}m 전에 켰어요. 회전 30m 전부터 켜 주세요</string>
+    <string name="card_fix_decel_turn">{turn} 전 최대 감속 초당 {a}km/h. 회전 50m 전부터 속도를 줄여 주세요</string>
+    <string name="card_fix_decel_bump">과속방지턱 전 최대 감속 초당 {a}km/h. 50m 전부터 속도를 줄여 주세요</string>
+    <string name="card_fix_decel_bump_speed">과속방지턱을 {kmh}km/h로 넘었어요. 30km/h 이하로 통과해 주세요</string>
+    <string name="card_fix_zone_one">스쿨존 최고 {max}km/h. {limit}km/h 이하로 달려 주세요</string>
+    <string name="card_fix_zone_many">스쿨존 {n}곳 과속(최고 {max}km/h). {limit}km/h 이하로 달려 주세요</string>
+    <string name="card_fix_basic_decel">급감속 {n}번. 일찍 속도를 줄여 보세요</string>
+    <string name="card_fix_basic_accel">급가속 {n}번. 가속 페달을 천천히 밟아 보세요</string>
+    <string name="card_fix_basic_over">과속 {n}번. 제한속도에 맞춰 달려 주세요</string>
+
+    <string name="card_note_route">내비 안내가 없어 회전 장면만 평가했어요</string>
+    <string name="card_note_basic">급가속·급감속·과속만 평가했어요</string>
+    <string name="card_note_none">기록할 장면이 없었어요</string>
+    <string name="card_note_gap">기록이 끊긴 구간은 점수에서 뺐어요</string>
+
+    <string name="card_score_first">기록 {n}회째</string>
+    <string name="card_score_up">이번 주행 +{d}점</string>
+    <string name="card_score_down">이번 주행 −{d}점</string>
+    <string name="card_score_same">점수 변화 없음</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="consent_title">무엇을 기록할까요?</string>
+    <string name="consent_local">주행 기록은 이 차에만 저장돼요. 언제든 확인하거나 지울 수 있어요</string>
+    <string name="consent_speed">속도·기어 (필수)</string>
+    <string name="consent_speed_detail">주행 시작·종료 시점과 거리를 기록해요</string>
+    <string name="consent_controls">깜빡이·브레이크·핸들</string>
+    <string name="consent_controls_detail">깜빡이를 켠 시점과 회전을 기록해요</string>
+    <string name="consent_controls_off">미리 켜기 평가와 차량 신호로 회전 추정을 하지 않아요</string>
+    <string name="consent_navi">내비 회전 안내</string>
+    <string name="consent_navi_detail">회전과 주의 지점까지 남은 거리를 확인해요</string>
+    <string name="consent_navi_off">내비 안내로 회전을 찾거나 구역을 평가하지 않아요</string>
+    <string name="consent_lamps">차량 경고등</string>
+    <string name="consent_lamps_detail">경고등이 켜진 전후의 급감속을 따로 확인해요</string>
+    <string name="consent_lamps_off">경고등이 켜진 구간의 급감속도 점수에 반영돼요</string>
+    <string name="consent_location">위치 (진행 방향)</string>
+    <string name="consent_location_detail">핸들 각도가 없으면 차가 움직인 방향으로 회전을 추정해요</string>
+    <string name="consent_location_off">위치로 회전을 추정하지 않아요</string>
+    <string name="consent_location_background">위치 권한을 ‘항상 허용’으로 바꾸고 ‘정확한 위치’를 켜 주세요</string>
+    <string name="consent_location_settings">위치 권한 설정</string>
+    <string name="consent_unavailable">이 차량에서는 위치를 쓸 수 없어요</string>
+    <string name="consent_start">시작하기</string>
+</resources>

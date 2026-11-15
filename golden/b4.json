@@ -1,0 +1,75 @@
+{
+  "id": "b4",
+  "name": "추정 회전 2번이 50m 안",
+  "route": "vehicle",
+  "km": 1.045389,
+  "endT": 138,
+  "tooShort": false,
+  "hadTbt": false,
+  "hadCau": false,
+  "scenes": [
+    {
+      "principle": "signal",
+      "t": 76.1,
+      "s": 0,
+      "est": true,
+      "kind": "우회전",
+      "value": null
+    },
+    {
+      "principle": "decel",
+      "t": 76.1,
+      "s": 1,
+      "est": true,
+      "kind": "우회전",
+      "target": "turn",
+      "aMax": 2.7,
+      "thr": 14,
+      "passV": 20,
+      "win": [
+        69.4,
+        76.1
+      ]
+    }
+  ],
+  "basic": {
+    "accel": [],
+    "decel": [],
+    "over": []
+  },
+  "risks": [],
+  "score": {
+    "P": {
+      "signal": 63.636364,
+      "decel": 72.727273,
+      "zone": null
+    },
+    "S": 68.181818,
+    "Bobs": 100,
+    "B": 90.103457,
+    "T": 79.142638,
+    "withoutExemptT": null
+  },
+  "card": {
+    "lines": [
+      {
+        "kind": "praise",
+        "principle": "decel",
+        "partial": false,
+        "est": true,
+        "text": "우회전 전에 미리 속도를 줄였어요"
+      },
+      {
+        "kind": "fix",
+        "principle": "signal",
+        "partial": false,
+        "est": true,
+        "text": "우회전 1번은 깜빡이를 안 켰어요. 회전 30m 전부터 켜 주세요"
+      }
+    ],
+    "notes": [
+      "내비 안내가 없어 회전 장면만 평가했어요"
+    ],
+    "scoreLine": "기록 1회째"
+  }
+}

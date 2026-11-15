@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="history_title">주행 기록</string>
+    <string name="settings_history">기록 보기</string>
+    <string name="settings_clear">모든 기록 지우기</string>
+    <string name="settings_clear_demo">시연 기록 지우기</string>
+    <string name="settings_confirm_all">모든 기록을 지울까요?</string>
+    <string name="settings_confirm_demo">시연 기록을 지울까요?</string>
+    <string name="settings_confirm_detail">지운 기록은 복구할 수 없어요</string>
+    <string name="settings_delete">지우기</string>
+    <string name="settings_cancel">취소</string>
+</resources>

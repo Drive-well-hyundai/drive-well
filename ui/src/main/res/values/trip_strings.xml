@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trip_today">오늘 운전</string>
+    <string name="trip_date">%1$d월 %2$d일 운전</string>
+    <string name="trip_time_distance">%1$s · %2$skm</string>
+    <string name="trip_demo_suffix">" · 시연"</string>
+    <string name="trip_estimated_suffix">" · 추정"</string>
+    <string name="trip_total">총점</string>
+    <string name="trip_praise">잘한 점</string>
+    <string name="trip_partial">해낸 것</string>
+    <string name="trip_fix">고칠 점</string>
+    <string name="trip_preparing">주행 정리 중</string>
+    <string name="trip_no_scenes">기록할 장면이 없었어요</string>
+    <string name="trip_scenes">장면 보기</string>
+</resources>

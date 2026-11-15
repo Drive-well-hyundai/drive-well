@@ -1,0 +1,119 @@
+{
+  "id": "b1",
+  "name": "회전 3번 중 2번 성공",
+  "route": "navi",
+  "km": 1.825333,
+  "endT": 201,
+  "tooShort": false,
+  "hadTbt": true,
+  "hadCau": false,
+  "scenes": [
+    {
+      "principle": "signal",
+      "t": 76.6,
+      "s": 1,
+      "est": false,
+      "kind": "좌회전",
+      "value": 40
+    },
+    {
+      "principle": "decel",
+      "t": 76.6,
+      "s": 0.7,
+      "est": false,
+      "kind": "좌회전",
+      "target": "turn",
+      "aMax": 8,
+      "thr": 15,
+      "passV": 20,
+      "win": [
+        70,
+        76.6
+      ]
+    },
+    {
+      "principle": "signal",
+      "t": 116.6,
+      "s": 1,
+      "est": false,
+      "kind": "우회전",
+      "value": 35
+    },
+    {
+      "principle": "decel",
+      "t": 116.6,
+      "s": 0.7,
+      "est": false,
+      "kind": "우회전",
+      "target": "turn",
+      "aMax": 8,
+      "thr": 15,
+      "passV": 20,
+      "win": [
+        110,
+        116.6
+      ]
+    },
+    {
+      "principle": "signal",
+      "t": 156.6,
+      "s": 0.406154,
+      "est": false,
+      "kind": "좌회전",
+      "value": 12.184615
+    },
+    {
+      "principle": "decel",
+      "t": 156.6,
+      "s": 0.7,
+      "est": false,
+      "kind": "좌회전",
+      "target": "turn",
+      "aMax": 8,
+      "thr": 15,
+      "passV": 20,
+      "win": [
+        150,
+        156.6
+      ]
+    }
+  ],
+  "basic": {
+    "accel": [],
+    "decel": [],
+    "over": []
+  },
+  "risks": [],
+  "score": {
+    "P": {
+      "signal": 72.35503,
+      "decel": 70,
+      "zone": null
+    },
+    "S": 71.177515,
+    "Bobs": 100,
+    "B": 90.179261,
+    "T": 80.678388,
+    "withoutExemptT": null
+  },
+  "card": {
+    "lines": [
+      {
+        "kind": "praise",
+        "principle": "signal",
+        "partial": false,
+        "est": false,
+        "text": "회전 3번 중 2번은 30m 전부터 깜빡이를 켰어요"
+      },
+      {
+        "kind": "fix",
+        "principle": "decel",
+        "partial": false,
+        "est": false,
+        "text": "좌회전 전 최대 감속 초당 8km/h. 회전 50m 전부터 속도를 줄여 주세요"
+      }
+    ],
+    "notes": [],
+    "scoreLine": "기록 1회째"
+  }
+}

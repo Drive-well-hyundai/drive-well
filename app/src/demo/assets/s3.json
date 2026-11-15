@@ -1,0 +1,24 @@
+{
+  "name": "스쿨존 37km/h 통과",
+  "route": "navi",
+  "start": "2026-11-10T15:20",
+  "events": [
+    {"t":0,"gear":"D","speed_kmh":0},
+    {"t":9000,"speed_kmh":36},
+    {"t":40000,"speed_kmh":36,"tbt":{"type":"TURN_RIGHT","distance":150}},
+    {"t":51500,"tbt":{"distance":35},"turn_signal":"RIGHT"},
+    {"t":52000,"speed_kmh":36,"tbt":{"distance":30},"brake":true},
+    {"t":56000,"speed_kmh":20,"tbt":{"distance":1},"steering_deg":300,"brake":false},
+    {"t":58500,"steering_deg":0},
+    {"t":59500,"speed_kmh":30,"tbt":{"type":"TURN_STRAIGHT","distance":600},"turn_signal":"OFF"},
+    {"t":70000,"speed_kmh":30,"caution":{"type":"SCHOOL_ZONE","remain":200,"limit":30}},
+    {"t":74000,"speed_kmh":37,"caution":{"remain":163}},
+    {"t":90000,"caution":{"remain":0}},
+    {"t":96000,"speed_kmh":37},
+    {"t":100000,"speed_kmh":28},
+    {"t":120000,"caution":null},
+    {"t":150000,"speed_kmh":28,"brake":true},
+    {"t":158000,"speed_kmh":0},
+    {"t":160000,"gear":"P"}
+  ]
+}

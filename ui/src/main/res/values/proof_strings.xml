@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="proof_settings">설정</string>
+    <string name="proof_recent">최근 주행</string>
+    <string name="proof_speed_off">속도 권한이 없어 주행 기록을 멈췄어요</string>
+    <string name="proof_period">최근 6개월</string>
+    <string name="proof_score">%1$d점</string>
+    <string name="proof_change">6개월 전 %1$d점 → 지금 %2$d점</string>
+    <string name="proof_situation_pending">상황을 평가할 기록이 없어요</string>
+    <string name="proof_no_opportunity">평가할 기록 없음</string>
+    <string name="proof_opportunities">성공 %1$d / 기회 %2$d</string>
+    <string name="proof_behaviour_signal">켠 거리 %1$s → %2$s</string>
+    <string name="proof_behaviour_decel">최대 감속 %1$s → %2$s</string>
+    <string name="proof_behaviour_zone">스쿨존 최고 속도 %1$s → %2$s</string>
+    <string name="proof_basic">기본 점수 %1$d점</string>
+    <string name="proof_basic_counts">100km당 급가속 %1$s · 급감속 %2$s · 과속 %3$s</string>
+    <string name="proof_met">500km 달성 · %1$dkm</string>
+    <string name="proof_pending">500km까지 · 현재 %1$dkm</string>
+    <string name="proof_progress">주행거리 500킬로미터 기준입니다.</string>
+    <string name="proof_trip_row">%1$s · %2$skm</string>
+    <string name="proof_chart_last">그래프의 최근 값은 %1$s입니다.</string>
+</resources>

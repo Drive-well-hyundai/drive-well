@@ -1,0 +1,59 @@
+{
+  "id": "b2",
+  "name": "스쿨존 2곳",
+  "route": "navi",
+  "km": 1.389194,
+  "endT": 162,
+  "tooShort": false,
+  "hadTbt": false,
+  "hadCau": true,
+  "scenes": [
+    {
+      "principle": "zone",
+      "t": 78.6,
+      "s": 1,
+      "est": false,
+      "max": 28,
+      "limit": 30
+    },
+    {
+      "principle": "zone",
+      "t": 137,
+      "s": 0.45,
+      "est": false,
+      "max": 41,
+      "limit": 30
+    }
+  ],
+  "basic": {
+    "accel": [],
+    "decel": [],
+    "over": []
+  },
+  "risks": [],
+  "score": {
+    "P": {
+      "signal": null,
+      "decel": null,
+      "zone": 70.416667
+    },
+    "S": 70.416667,
+    "Bobs": 100,
+    "B": 90.137016,
+    "T": 80.276841,
+    "withoutExemptT": null
+  },
+  "card": {
+    "lines": [
+      {
+        "kind": "praise",
+        "principle": "zone",
+        "partial": false,
+        "est": false,
+        "text": "스쿨존 2곳 중 1곳에서 30km/h 이하로 달렸어요"
+      }
+    ],
+    "notes": [],
+    "scoreLine": "기록 1회째"
+  }
+}

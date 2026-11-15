@@ -1,0 +1,19 @@
+{
+  "name": "스쿨존 2곳",
+  "route": "navi",
+  "start": "2026-11-10T08:20",
+  "events": [
+    {"t":0,"gear":"D","speed_kmh":0},
+    {"t":9000,"speed_kmh":36},
+    {"t":30000,"speed_kmh":36,"caution":{"type":"SCHOOL_ZONE","remain":100,"limit":30}},
+    {"t":36000,"speed_kmh":28},
+    {"t":40000,"caution":{"remain":0}},
+    {"t":82000,"caution":null},
+    {"t":100000,"speed_kmh":28,"caution":{"type":"SCHOOL_ZONE","remain":80,"limit":30}},
+    {"t":110000,"speed_kmh":28,"caution":{"remain":0}},
+    {"t":114000,"speed_kmh":41},
+    {"t":150000,"speed_kmh":41,"caution":null},
+    {"t":160000,"speed_kmh":0},
+    {"t":162000,"gear":"P"}
+  ]
+}
