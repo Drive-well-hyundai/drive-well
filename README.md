@@ -1,6 +1,127 @@
+<div align="center">
+
+<img src="docs/images/logo.png" width="112" alt="Drive Well 아이콘">
+
 # Drive Well
 
-**주행 뒤, 공정하게.** 내비가 아는 다음 회전과 차가 아는 운전자 행동을 맞춰, 깜빡이를 몇 m 전에 켰는지와 회전 앞에서 미리 줄였는지를 장면으로 남기는 Pleos Connect 차량용 운전 평가 앱이다. 주차한 뒤 칭찬 하나와 고칠 점 하나를 한 장으로 알려 준다.
+### 주행 뒤, 공정하게
+
+내비가 아는 다음 회전과 차가 아는 깜빡이·감속을 맞춰<br>
+운전을 **상황까지 보고 평가하는** Pleos Connect 차량용 앱
+
+![Pleos Connect](https://img.shields.io/badge/Pleos%20Connect-v2.1.0-FFB224?style=flat-square&labelColor=14181E)
+![Android](https://img.shields.io/badge/Android%2014-API%2034-FFB224?style=flat-square&labelColor=14181E)
+![Kotlin](https://img.shields.io/badge/Kotlin-2.0.21-FFB224?style=flat-square&labelColor=14181E)
+![Tests](https://img.shields.io/badge/단위%20테스트-196개%20통과-FFB224?style=flat-square&labelColor=14181E)
+
+[APK 내려받기](apk/DriveWell_release.apk) · [실행 방법](#실행-방법) · [화면](#화면) · [데이터와 SDK](#데이터와-sdk) · [테스트 환경](#테스트-환경과-필요-설정)
+
+<img src="docs/images/trip-card-scenes.png" alt="주차 직후의 오늘의 한 장과 장면 화면" width="100%">
+
+</div>
+
+주차한 뒤 알림 하나를 누르면 방금 운전이 한 장으로 나온다. 해낸 것 하나와 고칠 점 하나가 문장으로 적혀 있고, 깜빡이를 회전 몇 m 전에 켰는지가 30m 기준 자 위에 보인다. 주행 중에는 화면도 소리도 없다.
+
+## 왜 만들었나
+
+지금의 안전운전 점수가 공개한 항목은 과속, 급가속, 급감속, 심야 운행이다. 그 행동이 어떤 상황에서 나왔는지 가르는 항목은 없다.
+
+| 사실 | 수치 | 출처 |
+|---|---|---|
+| 교통사고 절반 가까이가 교차로에서 난다 | 48.4% (2025년, 사고 건수 기준) | 도로교통공단 교통사고 통계분석 |
+| 좌회전할 때 깜빡이를 켜지 않는 차가 네 대 중 한 대다 | 방향지시등 점등률 75.7% (2025년) | 국토교통부 교통문화지수 실태조사 |
+| 깜빡이 위반 신고가 많다 | 공익신고 453,161건 (2025년) | 보도 |
+
+깜빡이와 회전 안내는 차만 함께 볼 수 있다. 폰 내비는 회전까지 남은 거리는 알아도 깜빡이는 읽지 못하고, 차는 깜빡이는 알아도 다음 회전을 모른다. Pleos Connect 앱은 이 둘을 같은 시각에 받는다.
+
+## 핵심 기능
+
+| 기능 | 하는 일 |
+|---|---|
+| **미리 켜기** | 깜빡이를 켠 순간 회전까지 남은 거리로 점수를 매긴다. 30m 전이면 만점이고(도로교통법 시행령 기준) 15m 전이면 절반이다 |
+| **미리 줄이기** | 회전 앞 50m 구간의 감속으로 점수를 매긴다. 이 구간의 급감속은 급감속 횟수에서 빼서 두 번 깎지 않는다 |
+| **점수의 이유** | 주차 직후 오늘의 한 장에 이유를 문장으로 보여 준다. 산정식과 상수는 앱 안 "점수 기준" 화면에 공개한다 |
+| **운전 증명** | 최근 6개월·500km의 총점과 추이를 한 화면에 쌓는다 |
+
+같은 방식으로 스쿨존 속도와 과속방지턱 앞 감속도 평가한다. 차량 경고등(ESC, ABS)이 켜진 시점 앞뒤 5초의 급감속은 점수에서 뺀다.
+
+## 화면
+
+<table>
+<tr>
+<td width="50%" valign="top"><img src="docs/images/while-driving.png" alt="주행 중 화면"><br><b>주행 중</b><br>Drive Well 화면은 없다. 내비만 보이고, 앱은 백그라운드에서 기록만 한다</td>
+<td width="50%" valign="top"><img src="docs/images/trip-card.png" alt="오늘의 한 장"><br><b>주차 직후, 오늘의 한 장</b><br>해낸 것 하나와 고칠 점 하나를 문장으로 보여 준다</td>
+</tr>
+<tr>
+<td valign="top"><img src="docs/images/trip-card-scenes.png" alt="장면 화면"><br><b>장면</b><br>깜빡이를 켠 평균 거리를 30m 기준 자 위에 표시한다</td>
+<td valign="top"><img src="docs/images/warning-card.png" alt="경고등 카드"><br><b>경고등이 켜진 급감속</b><br>경고등이 켜진 시점 전후 5초의 급감속은 점수에서 뺀다</td>
+</tr>
+<tr>
+<td valign="top"><img src="docs/images/proof.png" alt="증명 화면"><br><b>증명</b><br>최근 6개월 총점, 세 원칙의 추이, 500km 진행도</td>
+<td valign="top"><img src="docs/images/reason-log.png" alt="이유 기록"><br><b>이유 기록</b><br>점수에서 뺀 급감속이 날짜와 경고등 이름으로 남는다</td>
+</tr>
+<tr>
+<td valign="top"><img src="docs/images/monthly-report.png" alt="월간 리포트"><br><b>월간 리포트</b><br>한 달의 변화를 정리하고 QR로 휴대폰에 옮긴다</td>
+<td valign="top"><img src="docs/images/scoring-rules.png" alt="점수 기준"><br><b>점수 기준</b><br>산정식, 상수, 기준을 바꾼 날짜를 운전자에게 공개한다</td>
+</tr>
+</table>
+
+화면은 모두 Pleos Connect Emulator v2.1.0(2560×1440)에서 2026-11-15에 찍었다. 기록은 시연 데이터이고 화면에 "· 시연"으로 표시된다.
+
+## 이용 흐름
+
+```mermaid
+flowchart LR
+    A["기어 D<br>출발"] --> B["백그라운드 기록<br>화면·소리 없음"]
+    B --> C["회전까지 남은 거리 × 깜빡이<br>회전 앞 50m 감속"]
+    C --> D["기어 P<br>주차"]
+    D --> E["주차 알림"]
+    E --> F["오늘의 한 장<br>해낸 것 하나 · 고칠 점 하나"]
+    F --> G["증명<br>최근 6개월 · 500km"]
+```
+
+운전자가 주행 중에 하는 일은 없다. 주차한 뒤 알림을 눌러 한 장을 보고, 보험 갱신 전에 앱을 열어 증명을 본다.
+
+## 차에서만 되는 평가
+
+| 신호 | 폰 앱 | Drive Well |
+|---|---|---|
+| 깜빡이 | 읽지 못한다 | Pleos Vehicle SDK `TurnSignal` |
+| 브레이크 페달 | 읽지 못한다 | Pleos Vehicle SDK `Brake` |
+| 기어 P (주차한 순간) | 읽지 못한다 | AAOS `GEAR_SELECTION` |
+| 차량 경고등 | 읽지 못한다 | Pleos Vehicle SDK `registerTelltales` |
+| 회전까지 남은 거리 | 폰 내비 앱 자신만 안다. 깜빡이와 함께 볼 수 없다 | NaviHelper `onTBTInfo` |
+| 속도 | GPS로 계산한다 | AAOS `PERF_VEHICLE_SPEED` (클러스터와 같은 값) |
+
+## 데이터와 SDK
+
+데이터 11개 중 6개는 실측 완료, 2개는 일부 실측, 3개는 미실측이다. 실측 완료는 Pleos Connect Emulator v2.1.0에서 값을 받아 본 항목이다.
+
+| 데이터 | SDK·API (권한) | 실측 |
+|---|---|---|
+| 차량 속도 | AAOS `PERF_VEHICLE_SPEED` (`CAR_SPEED`) | 실측 완료 |
+| 기어 | AAOS `GEAR_SELECTION` (`CAR_POWERTRAIN`) | 실측 완료 |
+| 깜빡이 | Vehicle State TurnSignal (`CAR_LIGHTS`) | 실측 완료 |
+| 브레이크, 주행거리 | Vehicle State Brake, Odometer (`CAR_DRIVE`) | 실측 완료 |
+| 핸들 각도 | Vehicle State SteeringWheel | 실측 완료 |
+| 주차 알림 | Android 알림 (중요도 HIGH) | 실측 완료 |
+| 회전 안내, 안내 상태 | NaviHelper `onTBTInfo`, `NavigationStatus` (`NAVI_ROUTE`) | 일부 실측. 회전 목록은 실측 완료, 주행 중 갱신 주기는 미실측 |
+| 차량 경고등 | Vehicle State Safety `registerTelltales` (`CAR_SAFETY`, `PRIVATE_CAR_SAFETY`) | 일부 실측. ESC·ABS는 실측 완료, FCA는 미실측 |
+| 주의 지점, 제한속도 | NaviHelper `onCautionPointInfo`, `onCameraAlert`, `onCurrentRoadSpeedLimit` (`NAVI_ROUTE`) | 미실측 |
+| 진행 방향 (선택) | FusedLocation heading (`FUSED_LOCATION`) | 미실측 |
+| 백그라운드 서비스 | 포그라운드 서비스 (`specialUse`) | 미실측. 부팅 뒤 자동 시작은 확인했다 |
+
+- 속도는 AAOS 차량 속성으로 받는다. Pleos SDK에는 속도 API가 없다.
+- 미실측 신호도 받는 코드는 있다. 신호가 오지 않으면 그 항목은 판정하지 않는다.
+- 음성 SDK와 Vehicle Control은 쓰지 않는다. 주행 뒤에 평가하는 앱이다.
+
+## 점수와 기록
+
+- 총점은 0~100점이고 최근 6개월·500km를 기준으로 쌓는다.
+- 주행 횟수가 적을 때 점수가 튀지 않도록 기회가 적은 원칙은 평균 쪽으로 당긴다.
+- 산정식과 상수는 "점수 기준" 화면에 그대로 적혀 있다.
+- 기록은 차 안에만 저장한다. 앱에 인터넷 권한이 없다.
+- Drive Well 점수로 보험료를 할인받는 것은 2단계 제안이다. 보험사와 협의하기 전이고, 이 저장소에는 전송 기능이 없다.
 
 ## APK
 
@@ -12,7 +133,7 @@
 
 ## 실행 방법
 
-1. Pleos Connect 에뮬레이터 v2.1.0을 켠다(아래 "테스트 환경").
+1. Pleos Connect 에뮬레이터 v2.1.0을 켠다(아래 "테스트 환경과 필요 설정").
 2. APK를 설치한다.
 
    ```bash
@@ -102,7 +223,23 @@ Virtual Console로 차를 움직여 새 주행을 만든다. 호스트 PC에 Pyt
   adb install -r -g app/build/outputs/apk/demo/app-demo.apk
   ```
 
-## 모듈
+## 구조
+
+```mermaid
+flowchart LR
+    subgraph CAR["차량"]
+        V["Pleos Vehicle SDK<br>깜빡이 · 브레이크 · 조향 · 경고등"]
+        N["NaviHelper<br>회전 목록 · 주의 지점"]
+        A["AAOS Car API<br>속도 · 기어"]
+    end
+    V --> S[":source<br>Live · Hybrid · Replay"]
+    N --> S
+    A --> S
+    S --> E[":engine<br>신호 처리 · 장면 판정"]
+    E --> SC[":scoring<br>원칙 점수 · 총점"]
+    SC --> D[":data<br>Room"]
+    D --> U[":ui<br>한 장 · 장면 · 증명"]
+```
 
 | 모듈 | 하는 일 | 종류 |
 |---|---|---|
@@ -116,9 +253,24 @@ Virtual Console로 차를 움직여 새 주행을 만든다. 호스트 PC에 Pyt
 | `:ui` | 화면 | Android |
 
 - SDK 콜백, 재생, 판정은 `dp-signal` 스레드 하나에서 돈다. 저장은 입출력 스레드에서 한다.
-- 판정 엔진(`:model`, `:engine`, `:scoring`)은 JVM 단위 테스트로 검증한다. 에뮬레이터가 필요 없다.
+- 판정 엔진(`:model`, `:engine`, `:scoring`)은 순수 Kotlin이다. 에뮬레이터 없이 JVM 단위 테스트로 검증한다.
 - 모듈 하나만 빌드할 때는 `./gradlew :engine:test`, `./gradlew :data:assembleDemo`처럼 부른다.
 - 버전은 [libs.versions.toml](gradle/libs.versions.toml) 한 곳에서 고친다.
+
+## 테스트
+
+JVM 단위 테스트는 196개이고 2026-11-15에 모두 통과했다.
+
+| 모듈 | 테스트 수 | 보는 것 |
+|---|---|---|
+| `:engine` | 121 | 신호 처리, 회전 찾기, 미리 켜기·미리 줄이기 판정, 경고등 앞뒤 급감속, 한 장 고르기 |
+| `:scoring` | 25 | 부분 점수, 원칙 점수, 총점, 주간 요약 |
+| `:model` | 17 | 시나리오 재생, 신호 값 |
+| `:service` | 17 | 주행 상태 전환, 동의 항목에 따른 신호 거르기, 시드 넣기 |
+| `:source` | 15 | 실제 신호 변환, 회전까지 남은 거리 계산, 재생 |
+| `:ui` | 1 | 월간 리포트 QR에 한글이 그대로 담기는지 |
+
+판정 결과는 기준 구현에서 뽑은 골든 JSON과 비교한다(아래 "시나리오와 골든").
 
 ## 시나리오와 골든
 
